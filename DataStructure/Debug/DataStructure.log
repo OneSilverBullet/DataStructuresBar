@@ -1,0 +1,4 @@
+﻿  源.cpp
+d:\developer\c++dev\datastructure\datastructure\kmp.h(31): warning C4018: “<”: 有符号/无符号不匹配
+d:\developer\c++dev\datastructure\datastructure\kmp.h(39): warning C4018: “<”: 有符号/无符号不匹配
+  DataStructure.vcxproj -> D:\Developer\C++Dev\DataStructure\Debug\DataStructure.exe
