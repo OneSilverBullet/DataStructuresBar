@@ -2,6 +2,7 @@
 #include "KMP.h"
 #include "vector.h"
 #include "List.h"
+#include "Tree.h"
 #include <iostream>
 
 
@@ -82,10 +83,34 @@ void ListTestCase()
 }
 
 
+void BSTTestCase()
+{
+	BinarySearchTree<int> bst;
+	bst.Insert(15);
+	bst.Insert(5);
+	bst.Insert(89);
+	bst.Insert(99);
+	bst.Insert(35);
+	bst.Insert(28);
+	bst.Insert(7);
+	bst.PrintTree();
+	bst.Remove(99);
+	bst.Remove(5);
+	bst.PrintTree();
+	cout << endl;
+	cout << bst.FindMax() << endl;
+	cout << bst.FindMin() << endl;
+	cout << bst.Contains(99) << endl;
+	cout << bst.Contains(35) << endl;
+
+	system("pause");
+}
+
 int main()
 {
 	//TrieTestCase();
 	//KMPTestCase();
 	//VectorTestCase();
-	ListTestCase();
+	//ListTestCase();
+	BSTTestCase();
 }

@@ -142,6 +142,7 @@
     <ClInclude Include="AC_Automation.h" />
     <ClInclude Include="KMP.h" />
     <ClInclude Include="List.h" />
+    <ClInclude Include="Tree.h" />
     <ClInclude Include="Trie.h" />
     <ClInclude Include="vector.h" />
   </ItemGroup>
