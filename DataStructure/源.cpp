@@ -3,6 +3,7 @@
 #include "vector.h"
 #include "List.h"
 #include "Tree.h"
+#include "AVL.h"
 #include <iostream>
 
 
@@ -106,11 +107,33 @@ void BSTTestCase()
 	system("pause");
 }
 
+void AVLTestCase()
+{
+	AVLTree<int> myavl;
+	myavl.insert(15);
+	myavl.insert(8);
+	myavl.insert(19);
+	myavl.insert(87);
+	myavl.insert(145);
+	myavl.insert(1);
+	myavl.insert(999);
+	cout << "after insert" << endl;
+	myavl.PrintT();
+	myavl.remove(19);
+	myavl.remove(15);
+	cout << "after delete" << endl;
+	myavl.PrintT();
+
+	system("pause");
+}
+
+
 int main()
 {
 	//TrieTestCase();
 	//KMPTestCase();
 	//VectorTestCase();
 	//ListTestCase();
-	BSTTestCase();
+	//BSTTestCase();
+	AVLTestCase();
 }
