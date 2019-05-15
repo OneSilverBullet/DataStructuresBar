@@ -4,6 +4,7 @@
 #include "List.h"
 #include "Tree.h"
 #include "AVL.h"
+#include "HashTable.h"
 #include <iostream>
 
 
@@ -127,6 +128,28 @@ void AVLTestCase()
 	system("pause");
 }
 
+void HashTableTestCase()
+{
+	HashTable<int> a(13);
+	a.insert(12);
+	a.insert(124);
+	a.insert(99);
+	a.insert(3243);
+	a.insert(62);
+	a.insert(72);
+	a.insert(13);
+	a.insert(29);
+	a.insert(362);
+	a.insert(5763);
+	a.show();
+
+	a.remove(13);
+	a.remove(5763);
+	a.show();
+
+	system("pause");
+}
+
 
 int main()
 {
@@ -135,5 +158,6 @@ int main()
 	//VectorTestCase();
 	//ListTestCase();
 	//BSTTestCase();
-	AVLTestCase();
+	//AVLTestCase();
+	HashTableTestCase();
 }
