@@ -39,6 +39,9 @@
     <ClInclude Include="HashTable.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Octree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="源.cpp">

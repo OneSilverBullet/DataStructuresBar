@@ -144,6 +144,7 @@
     <ClInclude Include="HashTable.h" />
     <ClInclude Include="KMP.h" />
     <ClInclude Include="List.h" />
+    <ClInclude Include="Octree.h" />
     <ClInclude Include="Tree.h" />
     <ClInclude Include="Trie.h" />
     <ClInclude Include="vector.h" />

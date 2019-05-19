@@ -5,6 +5,7 @@
 #include "Tree.h"
 #include "AVL.h"
 #include "HashTable.h"
+#include "Octree.h"
 #include <iostream>
 
 
@@ -151,6 +152,78 @@ void HashTableTestCase()
 }
 
 
+void OctreeTestCase()
+{
+	OctreeNode<double> *rootNode = NULL;
+	int choiced = 0;
+	int maxdepth;
+	while (true)
+	{
+		system("cls");
+		cout << "请选择操作：\n";
+		cout << "1.创建八叉树 2.先序遍历八叉树\n";
+		cout << "3.查看树深度 4.查找节点   \n";
+		cout << "0.退出\n\n";
+		cin >> choiced;
+		if (choiced == 0)
+			return;
+		else if (choiced == 1)
+		{
+			system("cls");
+			cout << "请输入最大递归深度：" << endl;
+			cin >> maxdepth;//递归深度
+			cout << "请输入外包盒坐标，顺序如下：xmin,xmax,ymin,ymax,zmin,zmax" << endl;
+			int xmin, xmax, ymin, ymax, zmin, zmax;
+			cin >> xmin >> xmax >> ymin >> ymax >> zmin >> zmax;
+			if (maxdepth >= 0 || xmax > xmin || ymax > ymin || zmax > zmin || xmin > 0 || ymin > 0 || zmin > 0)
+			{
+				CreateOctree(rootNode, maxdepth, xmin, xmax, ymin, ymax, zmin, zmax);
+
+				cout << "8叉树创建完毕, input the 'continue' to  \n" << endl; 
+			}
+			else
+			{
+				cout << "输入错误！";
+				return;
+			}
+		}
+		else if (choiced == 2)
+		{
+			system("cls");
+			cout << "先序遍历八叉树结果：/n";
+			PreOrder(rootNode);
+			cout << endl;
+			system("pause");
+		}
+		else if (choiced == 3)
+		{
+			system("cls");
+			int dep = GetDepth(rootNode);
+			cout << "此八叉树的深度为" << dep + 1 << endl;
+			system("pause");
+		}
+		else if (choiced == 4)
+		{
+			system("cls");
+			cout << "请输入您希望查找的点的坐标，顺序如下：x,y,z\n";
+			double x, y, z;
+			cin >> x >> y >> z;
+			cout << endl << "开始搜寻该点……" << endl;
+			Find(rootNode, x, y, z, 0);
+			system("pause");
+		}
+		else
+		{
+			system("cls");
+			cout << "\n\n错误选择！\n";
+			system("pause");
+		}
+	}
+
+	system("pause");
+	return;
+}
+
 int main()
 {
 	//TrieTestCase();
@@ -159,5 +232,6 @@ int main()
 	//ListTestCase();
 	//BSTTestCase();
 	//AVLTestCase();
-	HashTableTestCase();
+	//HashTableTestCase();
+	OctreeTestCase();
 }
