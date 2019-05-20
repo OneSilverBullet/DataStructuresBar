@@ -6,6 +6,7 @@
 #include "AVL.h"
 #include "HashTable.h"
 #include "Octree.h"
+#include "OnevecHashTable.h"
 #include <iostream>
 
 
@@ -224,6 +225,26 @@ void OctreeTestCase()
 	return;
 }
 
+void OnevecHashTableTestCase()
+{
+	OnevecHashTable<int> a(11);
+	//a.insert(123);
+	a.insert(87);
+	a.insert(22);
+	a.insert(213);
+	a.insert(265);
+	a.insert(23);
+	a.insert(64);
+	a.show();
+	a.remove(64);
+	a.remove(23);
+	a.remove(265);
+	a.show();
+	system("pause");
+}
+
+
+
 int main()
 {
 	//TrieTestCase();
@@ -233,5 +254,6 @@ int main()
 	//BSTTestCase();
 	//AVLTestCase();
 	//HashTableTestCase();
-	OctreeTestCase();
+	//OctreeTestCase();
+	OnevecHashTableTestCase();
 }
