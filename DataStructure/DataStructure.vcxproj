@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="AC_Automation.h" />
     <ClInclude Include="AVL.h" />
+    <ClInclude Include="BinaryHeap.h" />
     <ClInclude Include="HashTable.h" />
     <ClInclude Include="KMP.h" />
     <ClInclude Include="List.h" />

@@ -7,6 +7,7 @@
 #include "HashTable.h"
 #include "Octree.h"
 #include "OnevecHashTable.h"
+#include "BinaryHeap.h"
 #include <iostream>
 
 
@@ -243,6 +244,26 @@ void OnevecHashTableTestCase()
 	system("pause");
 }
 
+void BinaryHeapTestCase()
+{
+	BinaryHeap<int> a(11);
+	a.insert(12);
+	a.insert(24);
+	a.insert(78);
+	a.insert(3);
+	a.insert(38);
+	a.insert(17);
+	a.insert(39);
+	int x;
+	a.removeMin(x);
+	cout << x << endl;
+	a.removeMin(x);
+	cout << x << endl;
+	a.removeMin(x);
+	cout << x << endl;
+	system("pause");
+}
+
 
 
 int main()
@@ -255,5 +276,6 @@ int main()
 	//AVLTestCase();
 	//HashTableTestCase();
 	//OctreeTestCase();
-	OnevecHashTableTestCase();
+	//OnevecHashTableTestCase();
+	BinaryHeapTestCase();
 }
