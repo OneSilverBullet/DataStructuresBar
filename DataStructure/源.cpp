@@ -8,6 +8,7 @@
 #include "Octree.h"
 #include "OnevecHashTable.h"
 #include "BinaryHeap.h"
+#include "Graph-DFS.h"
 #include <iostream>
 
 
@@ -277,5 +278,10 @@ int main()
 	//HashTableTestCase();
 	//OctreeTestCase();
 	//OnevecHashTableTestCase();
-	BinaryHeapTestCase();
+	//BinaryHeapTestCase();
+	//GraphDFSTestCase();
+	//FloydTestCase();
+	//DijkstraTestCase();
+	SPFATestCase();
+	system("pause");
 }

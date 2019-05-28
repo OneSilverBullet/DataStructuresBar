@@ -48,6 +48,9 @@
     <ClInclude Include="BinaryHeap.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Graph-DFS.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="源.cpp">

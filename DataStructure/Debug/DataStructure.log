@@ -2,47 +2,52 @@
 d:\developer\c++dev\datastructure\datastructure\kmp.h(31): warning C4018: “<”: 有符号/无符号不匹配
 d:\developer\c++dev\datastructure\datastructure\kmp.h(39): warning C4018: “<”: 有符号/无符号不匹配
 d:\developer\c++dev\datastructure\datastructure\hashtable.h(28): warning C4018: “<”: 有符号/无符号不匹配
+d:\developer\c++dev\datastructure\datastructure\graph-dfs.h(303): warning C4018: “<”: 有符号/无符号不匹配
+d:\developer\c++dev\datastructure\datastructure\graph-dfs.h(329): warning C4018: “<”: 有符号/无符号不匹配
+d:\developer\c++dev\datastructure\datastructure\graph-dfs.h(310): warning C4101: “end”: 未引用的局部变量
+d:\developer\c++dev\datastructure\datastructure\graph-dfs.h(290): warning C4101: “j”: 未引用的局部变量
+d:\developer\c++dev\datastructure\datastructure\graph-dfs.h(290): warning C4101: “i”: 未引用的局部变量
 d:\developer\c++dev\datastructure\datastructure\hashtable.h(100): warning C4018: “>”: 有符号/无符号不匹配
   d:\developer\c++dev\datastructure\datastructure\hashtable.h(93): note: 编译 类 模板 成员函数 "bool HashTable<int>::insert(const HashObj &)" 时
           with
           [
               HashObj=int
           ]
-  d:\developer\c++dev\datastructure\datastructure\源.cpp(137): note: 参见对正在编译的函数 模板 实例化“bool HashTable<int>::insert(const HashObj &)”的引用
+  d:\developer\c++dev\datastructure\datastructure\源.cpp(138): note: 参见对正在编译的函数 模板 实例化“bool HashTable<int>::insert(const HashObj &)”的引用
           with
           [
               HashObj=int
           ]
-  d:\developer\c++dev\datastructure\datastructure\源.cpp(136): note: 参见对正在编译的 类 模板 实例化 "HashTable<int>" 的引用
+  d:\developer\c++dev\datastructure\datastructure\源.cpp(137): note: 参见对正在编译的 类 模板 实例化 "HashTable<int>" 的引用
 d:\developer\c++dev\datastructure\datastructure\hashtable.h(126): warning C4018: “<”: 有符号/无符号不匹配
   d:\developer\c++dev\datastructure\datastructure\hashtable.h(124): note: 编译 类 模板 成员函数 "void HashTable<int>::show(void)" 时
-  d:\developer\c++dev\datastructure\datastructure\源.cpp(147): note: 参见对正在编译的函数 模板 实例化“void HashTable<int>::show(void)”的引用
+  d:\developer\c++dev\datastructure\datastructure\源.cpp(148): note: 参见对正在编译的函数 模板 实例化“void HashTable<int>::show(void)”的引用
 d:\developer\c++dev\datastructure\datastructure\onevechashtable.h(129): warning C4018: “>”: 有符号/无符号不匹配
   d:\developer\c++dev\datastructure\datastructure\onevechashtable.h(122): note: 编译 类 模板 成员函数 "bool OnevecHashTable<int>::insert(const T &)" 时
           with
           [
               T=int
           ]
-  d:\developer\c++dev\datastructure\datastructure\源.cpp(233): note: 参见对正在编译的函数 模板 实例化“bool OnevecHashTable<int>::insert(const T &)”的引用
+  d:\developer\c++dev\datastructure\datastructure\源.cpp(234): note: 参见对正在编译的函数 模板 实例化“bool OnevecHashTable<int>::insert(const T &)”的引用
           with
           [
               T=int
           ]
-  d:\developer\c++dev\datastructure\datastructure\源.cpp(231): note: 参见对正在编译的 类 模板 实例化 "OnevecHashTable<int>" 的引用
+  d:\developer\c++dev\datastructure\datastructure\源.cpp(232): note: 参见对正在编译的 类 模板 实例化 "OnevecHashTable<int>" 的引用
 d:\developer\c++dev\datastructure\datastructure\onevechashtable.h(152): warning C4018: “<”: 有符号/无符号不匹配
   d:\developer\c++dev\datastructure\datastructure\onevechashtable.h(151): note: 编译 类 模板 成员函数 "void OnevecHashTable<int>::show(void)" 时
-  d:\developer\c++dev\datastructure\datastructure\源.cpp(239): note: 参见对正在编译的函数 模板 实例化“void OnevecHashTable<int>::show(void)”的引用
+  d:\developer\c++dev\datastructure\datastructure\源.cpp(240): note: 参见对正在编译的函数 模板 实例化“void OnevecHashTable<int>::show(void)”的引用
 d:\developer\c++dev\datastructure\datastructure\hashtable.h(144): warning C4018: “<”: 有符号/无符号不匹配
   d:\developer\c++dev\datastructure\datastructure\hashtable.h(141): note: 编译 类 模板 成员函数 "void HashTable<int>::rehash(void)" 时
   d:\developer\c++dev\datastructure\datastructure\hashtable.h(102): note: 参见对正在编译的函数 模板 实例化“void HashTable<int>::rehash(void)”的引用
   d:\developer\c++dev\datastructure\datastructure\hashtable.h(69): note: 编译 类 模板 成员函数 "HashTable<int>::HashTable(int)" 时
-  d:\developer\c++dev\datastructure\datastructure\源.cpp(136): note: 参见对正在编译的函数 模板 实例化“HashTable<int>::HashTable(int)”的引用
+  d:\developer\c++dev\datastructure\datastructure\源.cpp(137): note: 参见对正在编译的函数 模板 实例化“HashTable<int>::HashTable(int)”的引用
 d:\developer\c++dev\datastructure\datastructure\hashtable.h(149): warning C4018: “<”: 有符号/无符号不匹配
 d:\developer\c++dev\datastructure\datastructure\onevechashtable.h(113): warning C4018: “<”: 有符号/无符号不匹配
   d:\developer\c++dev\datastructure\datastructure\onevechashtable.h(111): note: 编译 类 模板 成员函数 "void OnevecHashTable<int>::makeEmpty(void)" 时
   d:\developer\c++dev\datastructure\datastructure\onevechashtable.h(98): note: 参见对正在编译的函数 模板 实例化“void OnevecHashTable<int>::makeEmpty(void)”的引用
   d:\developer\c++dev\datastructure\datastructure\onevechashtable.h(96): note: 编译 类 模板 成员函数 "OnevecHashTable<int>::OnevecHashTable(int)" 时
-  d:\developer\c++dev\datastructure\datastructure\源.cpp(231): note: 参见对正在编译的函数 模板 实例化“OnevecHashTable<int>::OnevecHashTable(int)”的引用
+  d:\developer\c++dev\datastructure\datastructure\源.cpp(232): note: 参见对正在编译的函数 模板 实例化“OnevecHashTable<int>::OnevecHashTable(int)”的引用
 d:\developer\c++dev\datastructure\datastructure\onevechashtable.h(178): warning C4018: “>=”: 有符号/无符号不匹配
   d:\developer\c++dev\datastructure\datastructure\onevechashtable.h(168): note: 编译 类 模板 成员函数 "int OnevecHashTable<int>::findPos(const T &) const" 时
           with
