@@ -150,6 +150,7 @@
     <ClInclude Include="OnevecHashTable.h" />
     <ClInclude Include="Tree.h" />
     <ClInclude Include="Trie.h" />
+    <ClInclude Include="UnionSet.h" />
     <ClInclude Include="vector.h" />
   </ItemGroup>
   <ItemGroup>

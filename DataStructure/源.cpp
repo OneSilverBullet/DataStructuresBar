@@ -9,6 +9,7 @@
 #include "OnevecHashTable.h"
 #include "BinaryHeap.h"
 #include "Graph-DFS.h"
+#include "UnionSet.h"
 #include <iostream>
 
 
@@ -282,6 +283,7 @@ int main()
 	//GraphDFSTestCase();
 	//FloydTestCase();
 	//DijkstraTestCase();
-	SPFATestCase();
+	//SPFATestCase();
+	UnionSetTestCase();
 	system("pause");
 }
