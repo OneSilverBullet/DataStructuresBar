@@ -144,6 +144,7 @@
     <ClInclude Include="BinaryHeap.h" />
     <ClInclude Include="Graph-DFS.h" />
     <ClInclude Include="HashTable.h" />
+    <ClInclude Include="kdtree.h" />
     <ClInclude Include="KMP.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="Octree.h" />
