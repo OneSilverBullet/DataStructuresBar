@@ -57,6 +57,9 @@
     <ClInclude Include="kdtree.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Search.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="源.cpp">

@@ -149,6 +149,7 @@
     <ClInclude Include="List.h" />
     <ClInclude Include="Octree.h" />
     <ClInclude Include="OnevecHashTable.h" />
+    <ClInclude Include="Search.h" />
     <ClInclude Include="Tree.h" />
     <ClInclude Include="Trie.h" />
     <ClInclude Include="UnionSet.h" />
