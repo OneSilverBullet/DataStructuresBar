@@ -197,18 +197,124 @@ double measureDistance(vector<double> point1, vector<double> point2, unsigned me
 }
 
 
-vector<double> searchNearestNeighbor(vector<int> goal, KDTree* tree)
+vector<double> searchNearestNeighbor(vector<double> goal, KDTree* tree)
 {
+	/*
+	首先在KD树当中找出包含目标点的叶子节点：
+	从根节点出发，递归向下访问kd树，若目标点的当前维度的坐标
+	小于切分点的坐标，则移动到左子节点，否则移动到右子节点。
+	直到子节点为叶节点为止。
+	否则移动到右子节点，知道子节点为叶子节点为止， 以此叶子节
+	点为“当前最近点”。
+	*/
 	unsigned k = tree->root.size();//计算出数据的维度
 	unsigned d = 0;//维度初始化为0，即从第1维开始
 	KDTree* currentTree = tree;
 	vector<double> currentNearest = currentTree->root;
 	while (!currentTree->isLeaf())
 	{
+		unsigned index = d % k;//计算当前堆
+		if (currentTree->rightChild->isEmpty() || goal[index] < currentNearest[index])
+		{
+			currentTree = currentTree->leftChild;
+		}
+		else
+		{
+			currentTree = currentTree->rightChild;
+		}
+		++d;
+	}
+	currentNearest = currentTree->root;
 
+	/*
+	递归的向上回退，在每一个节点都进行如下的操作：
+	1、如果该节点保存的实例比当前最近点距离目标点更近，那么用该点为“当前最近点”
+	2、当前最近点一定存在于某结点一个子结点对应的区域，检查该子结点的父节点的
+	另一子结点对应对应区域是否有更近的点。
+	*/
+
+	//当前最近邻与目标点的距离
+	double currentDistance = measureDistance(goal, currentNearest, 0);
+
+	//如果当前子kd树的根节点是其父节点的左孩子，搜索其父节点的右孩子。
+	KDTree* searchDistrict;
+	if (currentTree->isLeft())
+	{
+		if (currentTree->parent->rightChild == NULL)
+		{
+			searchDistrict = currentTree;
+		}
+		else
+		{
+			searchDistrict = currentTree->parent->rightChild;
+		}
+	}
+	else
+	{
+		searchDistrict = currentTree->parent->leftChild;
 	}
 
+	while (searchDistrict->parent != NULL)
+	{
+		double districtDistance = abs(goal[(d + 1) % k] - searchDistrict->parent->root[(d + 1) % k]);
 
+		if (districtDistance < currentDistance)
+		{
+			double parentDistance = measureDistance(goal, searchDistrict->parent->root, 0);
 
+			if (parentDistance < currentDistance)
+			{
+				currentDistance = parentDistance;
+				currentTree = searchDistrict->parent;
+				currentNearest = currentTree->root;
+			}
 
+			if (!searchDistrict->isEmpty())
+			{
+				double rootDistance = measureDistance(goal, searchDistrict->root, 0);
+				if (rootDistance < currentDistance)
+				{
+					currentDistance = rootDistance;
+					currentTree = searchDistrict;
+					currentNearest = currentTree->root;
+				}
+			}
+
+			if (searchDistrict->leftChild != NULL)
+			{
+				double leftDistance = measureDistance(goal, searchDistrict->leftChild->root, 0);
+				if (leftDistance < currentDistance)
+				{
+					currentDistance = leftDistance;
+					currentTree = searchDistrict;
+					currentNearest = currentTree->root;
+				}
+			}
+
+			if (searchDistrict->rightChild != NULL)
+			{
+				double rightDistance = measureDistance(goal, searchDistrict->rightChild->root, 0);
+				if (rightDistance < currentDistance)
+				{
+					currentDistance = rightDistance;
+					currentTree = searchDistrict;
+					currentNearest = currentTree->root;
+				}
+			}
+		}
+
+		if (searchDistrict->parent->parent != NULL)
+		{
+			searchDistrict = searchDistrict->parent->isLeft() ?
+				searchDistrict->parent->parent->rightChild :
+				searchDistrict->parent->parent->leftChild;
+		}
+		else
+		{
+			searchDistrict = searchDistrict->parent;
+		}
+		++d;
+	}//end wguke
+
+	return currentNearest;
 }
