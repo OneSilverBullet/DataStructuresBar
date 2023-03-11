@@ -1,5 +1,4 @@
 # DataSturctureBar
-* ��ʱ���������ѳ���Ա����֪�������ݽṹϵ�����á�������֪ʶ���������
 ## Vector
 ## List
 ## BST
@@ -10,7 +9,7 @@
 ## Trie
 ## Octree
 ## KMP
-## graph�����ֵ�Դ���·���㷨��dfs,floyd,dijkstra,SPFA
-## Union Set(����ʵ�ַ�ʽ)
+## graph search algorithm: dfs,floyd,dijkstra,SPFA
+## Union Set
 ## kdTree 
 ## smartPtr
